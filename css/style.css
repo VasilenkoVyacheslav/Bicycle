@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
-
+/*////////////////////////////////////////////////////////////////////////*/
 * {
     margin: 0;
     padding: 0;
@@ -34,6 +34,11 @@ input {
     outline: none;
     border: 0;
 }
+
+/*////////////////////////////////////////////////////////////////////////*/
+
+/*////////////////////////////////////////////////////////////////////////*/
+/*Header*/
 .wrapper {
     overflow: hidden;
 }
@@ -105,6 +110,11 @@ input {
     bottom: 5px;
     color: #4d4959;
 }
+
+/*////////////////////////////////////////////////////////////////////////*/
+
+/*////////////////////////////////////////////////////////////////////////*/
+/*Header menu mobile*/
 .logo-mobile, .menu-button, .close-menu {
     display: none;
 }
@@ -132,6 +142,10 @@ input {
     width: 65px;
 }
 
+/*////////////////////////////////////////////////////////////////////////*/
+
+/*////////////////////////////////////////////////////////////////////////*/
+/*Section About us*/
 #about-us {
     display: flex;
     flex-direction: column;
@@ -163,6 +177,10 @@ input {
     line-height: 1.8;
     margin-bottom: 145px;
 }
+/*////////////////////////////////////////////////////////////////////////*/
+
+/*////////////////////////////////////////////////////////////////////////*/
+/*Columns*/
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -195,6 +213,11 @@ input {
     align-items: center;
     justify-content: center;
 }
+
+/*////////////////////////////////////////////////////////////////////////*/
+
+/*////////////////////////////////////////////////////////////////////////*/
+
 .bg-image {
     background-size: cover;
     background-position: 50% 50%;
@@ -237,6 +260,11 @@ input {
     padding: 125px 0 65px;
     background: #f7f7f7;
 }
+
+/*////////////////////////////////////////////////////////////////////////*/
+
+/*////////////////////////////////////////////////////////////////////////*/
+/*Slider with site of ..Swiper..*/
 
 .swiper-slide {
     text-align: center;
@@ -290,6 +318,7 @@ input {
     background: #a9afb3;
 }
 
+/*Section Shop*/
 #shop a[class^='col-'] {
     height: 265px;
     background-position: 50% 50%;
@@ -318,8 +347,31 @@ input {
     opacity: 1;
 }
 
+.discover-shop {
+    background: #282f35;
+    text-align: center;
+    padding: 75px 0 75px;
+}
+
+.discover-shop ul {
+    border: solid #94979a;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 18px 0 18px;
+    text-transform: uppercase;
+}
+
+.discover-shop li a {
+    color: #fff;
+}
+
+/*Media requestion*/
 
 @media (max-width: 1024px) {
+    .header .banner {
+        min-height: 80vh;
+    }
+
     .logo-mobile, .menu-button, .close-menu {
         display: block;
     }
@@ -338,6 +390,7 @@ input {
     }
     .navigation-wrapper.active {
         right: 0;
+        z-index: 10 ;
     }
     .navigation-wrapper .logo {
         display: none;
@@ -358,4 +411,83 @@ input {
         justify-content: space-between;
         padding: 15px;
     }
+
+    .about-us-logo {
+        margin-top: 50px;
+    } 
 }
+
+@media (max-width: 900px){
+    .col-text {
+        padding: 20px 25px 20px;
+    }
+
+    .reviews {
+        padding: 35px 10px 15px         ;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: 75px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    p {
+        font-size: 14px;
+    }
+
+    .swiper-slide p {
+        font-size: 16px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    .col-66 {
+        width: 100%;
+    }
+
+    .col-33 {
+        width: 100%;
+    }
+
+    .bg-image {
+        min-height: 250px;
+    }
+
+    .row {
+        border: solid black;
+        padding: 10px;
+        background: linear-gradient(235deg, #71b89c, #060c21, #00bcd4);
+    }
+
+    #shop .row .col-fullheight {
+        height: 300px;
+    }
+
+    .about-us-text {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 320px) {
+    .navigation-wrapper.active {
+        height: 50vh;
+    }
+    .about-us-text {
+        height: 45vh;
+    }
+
+    .header .banner {
+        min-height: 50vh;
+        box-shadow: inset 0 80px 0 rgba(0, 250, 250, 0.2);
+    }
+
+    .text-18 {
+        font-size: 16px;
+    }
+}
+
+/*////////////////////////////////////////////////////////////////////////*/
